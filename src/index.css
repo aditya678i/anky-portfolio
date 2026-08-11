@@ -1,0 +1,35 @@
+/* ── Global Reset & Base ───────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+  max-width: 100%;
+  -webkit-text-size-adjust: 100%; /* prevent iOS font size bump on orientation change */
+}
+
+/* ── Media defaults ────────────────────────────────────────────────────────── */
+img, video, iframe, embed, object {
+  max-width: 100%;
+}
+
+/* ── Remove tap highlight on mobile ───────────────────────────────────────── */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}

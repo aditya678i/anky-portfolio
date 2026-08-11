@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&family=Inter:wght@400;500;900&display=swap');
+
+.fill-text-wrapper { position: relative; display: inline-block; }
+.services-title-wrap { position: relative; display: inline-block; }
+
+.services-title-outline {
+    position: relative;
+    color: #e6e9ee !important;
+    -webkit-text-fill-color: #e6e9ee !important;
+    -webkit-text-stroke: 1.5px #000 !important;
+    text-stroke: 1.5px #000 !important;
+    paint-order: stroke fill !important;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.services-title-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+    -webkit-text-stroke: 1.5px #000 !important;
+    text-stroke: 1.5px #000 !important;
+    paint-order: stroke fill !important;
+    clip-path: inset(0% 100% 0% 0%);
+    opacity: 0;
+    z-index: 3;
+    white-space: inherit;
+    pointer-events: none;
+    will-change: clip-path;
+}
+
+.number-group {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    position: sticky;
+    top: 20vh;
+    flex-shrink: 0;
+}
+.number-wrap {
+    position: relative;
+    display: inline-block;
+}
+.number-outline {
+    display: block;
+    color: #e6e9ee !important;
+    -webkit-text-fill-color: #e6e9ee !important;
+    -webkit-text-stroke: 1.5px #000 !important;
+    paint-order: stroke fill !important;
+    pointer-events: none;
+}
+.number-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+    -webkit-text-stroke: 1.5px #000 !important;
+    paint-order: stroke fill !important;
+    clip-path: inset(100% 0% 0% 0%);
+    opacity: 0;
+    white-space: inherit;
+    pointer-events: none;
+    will-change: clip-path;
+}
+.dot-wrap {
+    position: relative;
+    display: inline-block;
+    font-size: 5vw;
+    line-height: 1;
+    font-family: 'Montserrat', sans-serif;
+}
+.dot-outline {
+    display: block;
+    color: #e6e9ee !important;
+    -webkit-text-fill-color: #e6e9ee !important;
+    -webkit-text-stroke: 1.5px #000 !important;
+    paint-order: stroke fill !important;
+    pointer-events: none;
+}
+.dot-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ff8c00 !important;
+    -webkit-text-fill-color: #ff8c00 !important;
+    -webkit-text-stroke: 1.5px #ff8c00 !important;
+    paint-order: stroke fill !important;
+    clip-path: inset(100% 0% 0% 0%);
+    opacity: 0;
+    white-space: inherit;
+    pointer-events: none;
+    will-change: clip-path;
+}
+
+@media (max-width: 768px) {
+    .services-title-outline { -webkit-text-stroke: 1px #000 !important; }
+    .services-title-fill { -webkit-text-stroke: 1px #000 !important; }
+    .number-outline { -webkit-text-stroke: 1px #000 !important; }
+    .number-fill { -webkit-text-stroke: 1px #000 !important; }
+    .dot-outline { -webkit-text-stroke: 1px #000 !important; }
+    .dot-fill { -webkit-text-stroke: 1px #ff8c00 !important; }
+    .services-title-wrap {
+        font-size: clamp(60px, 12vw, 120px) !important;
+    }
+}
+
+@media (min-width: 2200px) {
+    .services-title-wrap {
+        font-size: clamp(180px, 12vw, 320px) !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .services-title-outline { opacity: 1 !important; }
+    .services-title-fill { opacity: 0 !important; clip-path: inset(0% 100% 0% 0%) !important; }
+}
